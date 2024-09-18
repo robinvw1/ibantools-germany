@@ -50,10 +50,9 @@
     "build:all": "rimraf dist && npm run build && npm run esm-wrapper && npm run esbuild",
     "esm-wrapper": "ts-node src/cli/esm-wrapper.ts",
     "esbuild": "esbuild src/browser.ts --bundle --minify --outfile=dist/build/browser.js",
-    "prepare": "husky install",
     "prepack": "npm run clean && npm run lint && npm run test && npm run build:all"
   },
-  "devDependencies": {
+  "dependencies": {
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.7",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
